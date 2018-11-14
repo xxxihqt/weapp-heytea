@@ -1,0 +1,31 @@
+/* components/address.wxss */
+.addressBox{
+  position: fixed;
+  left:0px;
+  top:0px;
+  padding:0px 10px 10px 10px;
+  background: #fff;
+}
+.shopName{
+  margin-bottom:5px;
+}
+ .changeShop{
+  display: inline-block;
+  font-size:12px;
+  color:red;
+}
+.shop{
+  font-size:14px;
+  font-weight: 900;
+  padding:0px 10px;
+}
+.express{
+  font-size:12px;
+}
+.tel-address{
+  color:#aaa;
+  font-size:9px;
+}
+.tel{
+  margin-right:5px;
+}

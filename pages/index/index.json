@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "address": "/components/address/address",
+    "index-main": "/components/index-main/index-main"
+  }
+}

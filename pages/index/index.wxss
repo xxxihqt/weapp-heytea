@@ -1,0 +1,13 @@
+/**index.wxss**/
+.container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.address{
+  height: 10vh;
+}
+#index-main{
+  height: 90vh;
+}

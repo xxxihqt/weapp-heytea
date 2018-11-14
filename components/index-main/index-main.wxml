@@ -1,0 +1,48 @@
+<!--components/indexmain/index-mian.wxml bindscroll="handleScroll"-->
+<view class="main">
+  <view class="menuBox">
+    <scroll-view vertical="true" scroll-y="true" class="menu_scrollBox" scroll-with-animation="true" scroll-into-view="{{contentActive}}" >
+      <view wx:for="{{menuData.data}}" wx:key="{{index}}" class="menu-list  {{index==navActive?'navActive':''}}" data-current_id="current{{index}}" catchtap='chooseTap' data-index="{{index}}" >
+      {{item.name}}
+      </view>
+    </scroll-view>
+  </view>
+  <view  class="productBox">
+    <scroll-view vertical="true" scroll-y="true"  class="scrollBox" scroll-into-view="{{contentActive}}" scroll-with-animation="true"id="scrollBox" bindscroll="handleScroll">
+      <view wx:for="{{menuData.data}}" wx:key="{{item.id}}" wx:for-index="littleIndex" class="product-list" id="current{{littleIndex}}">
+        <text class="title">{{item.name}}</text>
+        <view wx:for="{{item.products.data}}" wx:for-item="inner_item" wx:key="inner_item.category_id" class="product" >
+        <view class="imgBox" bindtap="onImageTap" data-list="current{{littleIndex}}" data-imageid="{{inner_item.id}}">
+          <image src="{{inner_item.images.data.url}}" class="img"></image>        
+        </view>
+        <view class="descBox">
+          <text class="product_name">{{inner_item.name}}</text>
+          <text class="product_desc">{{inner_item.description}}</text>
+          <view>
+            <text class="product_price">￥{{inner_item.skus.data[0].price}}</text>
+            <text class="choose">选规格</text>
+          </view>
+        </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>  
+  <view class="detailBox" wx:if="{{isCurrentProduct}}">
+    <view class="closeBox" >
+      <text class="close"  bindtap="onCloseTap">X</text>
+    </view>
+    <view class="msgBox">
+      <view class="current_img_box">
+        <image src="{{currentProduct.images.data.url}}" class="current_img"></image>        
+      </view>
+      <view>
+        <text class="current_name">{{currentProduct.name}}</text>
+        <text class="current_desc">{{currentProduct.description}}</text>
+        <text class="current_price">￥{{currentProduct.skus.data[0].price}}</text>
+        <text class="choose">选规格</text>
+      </view>
+    </view>
+  </view>
+  <view class="coverBox" wx:if="{{isCurrentProduct}}"  bindtap="onCloseTap">
+  </view>
+</view>

@@ -1,0 +1,14 @@
+<!--components/address.wxml-->
+  <view class="addressBox">
+    <view class="shopName">
+        <text class="changeShop">[换门店]</text>
+        <text class="shop">东方宝泰</text>
+        <text class="express">可外送</text>
+    </view>
+    <view class="tel-address">
+      <text class="tel">联系电话：020-38615321</text>
+      <text>天河区林和中路63号东方宝泰B3层3046号铺</text>
+    </view>
+    <text></text>
+    <text>{{text}}</text>
+  </view>

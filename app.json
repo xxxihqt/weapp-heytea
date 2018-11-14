@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/me/me"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "喜茶GO",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "点单",
+        "iconPath":"icons/home1.png",
+        "selectedIconPath":"icons/home2.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "取餐",
+        "iconPath": "icons/get1.png",
+        "selectedIconPath": "icons/get2.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "icons/me1.png",
+        "selectedIconPath": "icons/me2.png"
+      }
+    ],
+    "selectedColor":"black"
+  }
+}

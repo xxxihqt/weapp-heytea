@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container">
+  <address class="address"></address>
+  <index-main menuData="{{datalist}}" id="index-main"></index-main>
+</view>
