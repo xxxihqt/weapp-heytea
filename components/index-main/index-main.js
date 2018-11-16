@@ -22,7 +22,7 @@ Component({
     isChooseBox:false,
     current_choose:[],
     isChoose:0,
-    show_add_qty:false,
+    shopping_product:[]
   },
 
   /**
@@ -94,38 +94,16 @@ Component({
         isDetail:true
       })
       this.getcurrentProduct(e);
-      console.log(this.data);
-    },
-    onCloseTap(){
-      this.setData({
-        isCurrentProduct: false,
-        currentProduct: '',
-        isDetail:false,
-        isChooseBox: false        
-      })
-    },
-    choose(e){
-      this.setData({
-        isCurrentProduct: true,
-        isDetail: false,
-        isChooseBox:true
-      })
-      console.log('choose',e);
-      if (e.currentTarget.dataset.list){
-        this.getcurrentProduct(e);                          
-        }else{
-        console.log('false', this.data.currentProduct.material_groups.length)
-        }
     },
     getcurrentProduct(e){
-      let current_product_list_id = e.currentTarget.dataset.list;
-      let current_product_image_id = e.currentTarget.dataset.imageid;
+      let current_product_list_id = e.detail.target.dataset.list;
+      let current_product_image_id = e.detail.target.dataset.imageid;
       current_product_list_id = current_product_list_id.slice(7) * 1;
       console.log(current_product_image_id);
       for (let item of this.properties.menuData.data[current_product_list_id].products.data) {
         if (item.id == current_product_image_id) {
-          this.init_currentProduct(item);
-          console.log(item);
+            this.init_currentProduct(item);
+            console.log(item);
           
           this.setData({
             currentProduct: item
@@ -164,19 +142,13 @@ Component({
       })
       console.log(current_choose);
     },
-    onGetChoosed(e){
-      console.log(e)
-      // this.setData({
-      //   code: e.detail.val
-      // })
-    },
     add_qty(e){
+      console.log('add_qty',e);
       let qty=0;
       ++qty;
-      this.setData({
-        show_add_qty: true
-      })
-      if (e.currentTarget.dataset.list) {
+     
+     
+      if (e.detail.target.dataset.list) {
         this.getcurrentProduct(e);
         if (this.data.currentProduct.qty) {
          qty += this.data.currentProduct.qty;
@@ -187,10 +159,76 @@ Component({
         this.setData({
           currentProduct: new_current_product
         })
+        this.get_shopping_list();
         console.log(this.data.currentProduct.qty);
       } else {
         console.log('false',e)
       }
+    },
+    cut_qty(e){
+      let cut_current_qty=this.data.currentProduct;
+      --cut_current_qty.qty;
+      if(--cut_current_qty.qty<=0){
+        this.setData({
+          currentProduct:''
+        })
+      }else{
+        this.setData({
+          currentProduct:cut_current_qty
+        })
+        this.get_shopping_list();
+      }
+    },
+    //添加到购物车
+    get_shopping_list(){
+      let new_shopping_list=this.data.shopping_product;
+      if(new_shopping_list.length>0){
+       //去重
+        new_shopping_list=new_shopping_list.filter((element, index, self)=>{
+            return element.id != this.data.currentProduct.id;
+        });
+
+        new_shopping_list.push(this.data.currentProduct);
+
+      }else{
+        new_shopping_list.push(this.data.currentProduct)
+      }
+      this.setData({
+        shopping_product:new_shopping_list
+      })
+      console.log('shopping_product',this.data.shopping_product)
+    },
+    onCloseTap(){
+      this.setData({
+        isCurrentProduct: false,
+        currentProduct: '',
+        isDetail:false,
+        isChooseBox: false        
+      })
+    },
+    onGetisDetail(e){
+      console.log('get',e);
+      if(e.detail.isDetail===false){
+        console.log('detail');
+        this.setData({
+          isDetail:e.detail.isDetail,
+          isCurrentProduct: false
+        })
+      }
+      if(e.detail.isChooseBox===false){
+        console.log('choose');
+        this.setData({
+          isChooseBox:e.detail.isChooseBox,
+          isCurrentProduct: false
+        })
+      }
+    },
+    onGetisChooseBox(e){
+      this.setData({
+        isCurrentProduct: true,
+        isDetail:e.detail.isDetail,
+        isChooseBox: e.detail.isChooseBox
+     })
     }
   }
 })

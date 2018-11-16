@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+     "current-product":"/components/inde-main-components/current-product/current-product"
+  }
+}

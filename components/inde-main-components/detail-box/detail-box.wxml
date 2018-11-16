@@ -1,0 +1,21 @@
+<!--components/inde-main-components/detail-box/detail-box.wxml-->
+<view class="detailBox">
+    <view class="closeBox" >
+      <text class="close"  bindtap="onCloseTap">X</text>
+    </view>
+    <view class="msgBox">
+      <view class="current_img_box">
+        <image src="{{currentProduct.images.data.url}}" class="current_img"></image>        
+      </view>
+      <view class="current_text_box">
+        <view class="text-box">
+           <text class="current_name product_name">{{currentProduct.name}}</text>
+            <text class="current_desc product_desc">{{currentProduct.description}}</text>
+        </view>
+        <view class="bottom_box">
+         <text class="current_price product_price">￥{{currentProduct.skus.data[0].price}}</text>
+          <text class="choose choose_two" catchtap='choose'>选规格</text>          
+        </view>
+      </view>
+    </view>
+</view>

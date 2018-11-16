@@ -1,0 +1,96 @@
+/* components/inde-main-components/choose-box/choose-box.wxss */
+.chooseBox{
+  position:fixed;
+  left:10vw;
+  right:10vw;
+  top:20%;
+  bottom:10%;
+  width:75vw;
+  height: 60vh;
+  margin:0 auto;
+  line-height: 100vh;
+  background:#fff;
+  z-index:9999;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+    .title_box{
+      text-align: center;  
+      height: 60rpx;
+      line-height: 60rpx;
+    }
+        .choose_close{
+            position: absolute;
+            right:0rpx;
+            padding:0rpx 20rpx 0rpx 20rpx;
+            font-size:36rpx;
+            color:#aaa;
+            font-weight: 200;  
+        }
+    .classify_box{
+      height:80%;
+      display: flex;
+      flex-direction: column;
+      padding-bottom:100rpx;
+    }
+        .currentProduct_section_group{
+          height: 1;
+          line-height: 100%;
+        }
+    .add_to_car_box{
+          width:100%;
+          position: absolute;
+          left:0;
+          bottom:0;
+          padding: 10rpx 20rpx;
+          height: 100rpx;
+          background: #eee;
+          line-height: 0rpx;
+          box-sizing: border-box;
+          display: flex;
+    }
+    .car_text_box{
+        width:55%;
+    }
+        .current_price{
+              display: block;  
+              font-weight: 900;
+              font-size:34rpx;
+              line-height: 36rpx;
+              margin-bottom:10rpx;
+        }
+        .choose_section{
+              height: 32rpx;
+              overflow: hidden;
+              line-height: 32rpx;
+        }
+        .current_choose_item{
+              display: inline-block;
+              height: 32rpx;
+              font-size:24rpx;
+              color:#aaa;
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
+              margin-bottom: 8rpx;
+            }
+    .car_go_box{
+      width:45%;
+      text-align: center;
+    }
+    .add_to_car{
+      margin: 0 auto;  
+      margin-top: 10rpx;
+      background: burlywood;
+      color:white;
+      display: block;
+      padding:10rpx 20rpx;
+      border-radius:20rpx;
+      float:right;
+      height: 40rpx;
+      line-height: 40rpx;
+      font-size:28rpx;
+    }

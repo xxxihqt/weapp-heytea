@@ -1,31 +1,35 @@
 /* components/address.wxss */
 .addressBox{
   position: fixed;
-  left:0px;
-  top:0px;
-  padding:0px 10px 10px 10px;
+  left:0rpx;
+  top:0rpx;
+  padding:0rpx 20rpx 20rpx 20rpx;
   background: #fff;
 }
 .shopName{
-  margin-bottom:5px;
+  margin-bottom:10rpx;
 }
  .changeShop{
   display: inline-block;
-  font-size:12px;
-  color:red;
+  font-size:30rpx;
+  color:burlywood;
 }
 .shop{
-  font-size:14px;
+  font-size:28rpx;
   font-weight: 900;
-  padding:0px 10px;
+  padding:0rpx 20rpx;
 }
 .express{
-  font-size:12px;
+  font-size:20rpx;
+  color:#ccc;
+  padding:5rpx;
+  border:2rpx solid #ccc;
+  border-radius:10rpx;
 }
 .tel-address{
   color:#aaa;
-  font-size:9px;
+  font-size:22rpx;
 }
 .tel{
-  margin-right:5px;
+  margin-right:10rpx;
 }

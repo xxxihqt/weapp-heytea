@@ -1,6 +1,8 @@
 {
   "component": true,
   "usingComponents": {
-    "current-product":"/components/current-product/current-product"
+    "edit-qty":"/components/inde-main-components/edit-qty/edit-qty",
+    "choose-box":"/components/inde-main-components/choose-box/choose-box",
+    "detail-box":"/components/inde-main-components/detail-box/detail-box"
   }
 }

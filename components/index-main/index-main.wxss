@@ -12,44 +12,45 @@
   height: 90%;
 }
 .menu-list{
-  width:75px;
-  padding:10px;
-  font-size:12px;
+  width:180rpx;
+  padding:20rpx 30rpx 20rpx 20rpx;
+  font-size:30rpx;
   background: #eef;
-  border-left:3px solid #eef;  
+  border-left:10rpx solid #eef;  
   box-sizing: border-box;
 }
 .productBox{
   width:90%;
   height: 100vh;
   overflow-y: auto;
-  padding-left:5px;
+  padding-left:10rpx;
 }
 .scrollBox{
   height: 90%;
 }
 .navActive{
-  border-left:3px solid burlywood;
+  border-left:6rpx solid burlywood;
   background: #fff;
 }
 .product-list{
   box-sizing: border-box;
 }
 .title{
-  font-size:11px;
+  font-size:28rpx;
   display: block;
-  height:30px;
-  line-height: 30px;
+  height:60rpx;
+  line-height: 60rpx;
 }
 .product{
   display: flex;
-  margin-bottom:20px;
-  padding-right:10px;
+  margin-bottom:40rpx;
+  padding-right:20rpx;
   box-sizing: border-box;
 }
 .imgBox{
+margin-top:40rpx;
   width: 30%;
-  height: 50px;
+  height: 130rpx;
 }
 .img{
   width:100%;
@@ -60,81 +61,27 @@
   position: relative; 
 }
 .product_name{
-  font-size:12px;
+  font-size:28rpx;
   font-weight:700;
 }
 .product_desc{
-  margin:5px 0px;
+  margin:10rpx 0rpx;
   display: block;
-  font-size:10px;
+  font-size:26rpx;
   color:#bbb;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  margin-bottom: 4px;
+  margin-bottom: 8rpx;
 }
 .product_price{
   font-weight: 900;
-  font-size:14px;
+  font-size:34rpx;
 }
 
-.detailBox{
-  position:fixed;
-  left:10vw;
-  right:10vw;
-  top:20%;
-  bottom:10%;
-  width:75vw;
-  height: 60vh;
-  margin:0 auto;
-  line-height: 100vh;
-  background:#fff;
-  z-index:9999;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-.msgBox{
-  height: 90%;
-}
-.current_img_box{
-  width:100%;
-  height: 53%;
-  text-align: center;
-}
-.current_img{
-  width:70%;
-  height: 85%;
-  margin:0 auto;
-  display: block;
-}
-.current_text_box{
-  height: 47%;
-  line-height: 20px;  
-  background: #eee;
-  padding:10px 15px;  
-  box-sizing: border-box;
-  position: relative;   
-}
-.closeBox{
-  width:100%;
-  height:30px;
-  text-align: right;
-  line-height: 30px;
-}
-.choose_two{
-  right:10px;
-  bottom:10px;
-}
-.close{
-  padding:10px 10px 0px 10px;
-  font-size:18px;
-  color:#aaa;
-  font-weight: 200;  
-}
+
 .coverBox{
   position:fixed;
   left:0;
@@ -145,127 +92,13 @@
   z-index:90;
 }
 
-.chooseBox{
-   position:fixed;
-  left:10vw;
-  right:10vw;
-  top:20%;
-  bottom:10%;
-  width:75vw;
-  height: 60vh;
-  margin:0 auto;
-  line-height: 100vh;
-  background:#fff;
-  z-index:9999;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-.title_box{
-  text-align: center;  
-  height: 30px;
-  line-height: 30px;
-}
-  .current_title{
-    
-  }
-  .choose_close{
-    position: absolute;
-    right:0px;
-    padding:0px 10px 0px 10px;
-    font-size:18px;
-    color:#aaa;
-    font-weight: 200;  
-  }
-.classify_box{
-  height:80%;
-  display: flex;
-  flex-direction: column;
-  padding-bottom:50px;
-}
-.currentProduct_section_group{
-  height: 1;
-  line-height: 100%;
-}
-.add_to_car_box{
-  width:100%;
-  position: absolute;
-  left:0;
-  bottom:0;
-  padding: 5px 10px;
-  height: 50px;
-  background: #eee;
-  line-height: 0px;
-  box-sizing: border-box;
-  display: flex;
-}
-.car_text_box{
-  width:55%;
-}
-.car_go_box{
-  width:45%;
-  text-align: center;
-}
-.add_to_car{
-  margin: 0 auto;  
-  margin-top: 5px;
-  background: burlywood;
-  color:white;
-  display: block;
-  padding:5px 10px;
-  border-radius:10px;
-  float:right;
-  height: 20px;
-  line-height: 20px;
-  font-size:12px;
-}
-.current_price{
-  display: block;  
-  font-weight: 900;
-  font-size:14px;
-  line-height: 18px;
-}
 .current_choose{
   display: block;
-  font-size:12px;
+  font-size:24rpx;
   color:#aaa;
 }
-.choose_section{
-  height: 16px;
-  overflow: hidden;
-  line-height: 16px;
-}
-.current_choose_item{
-  display: inline-block;
-  height: 16px;
-  font-size:10px;
-  color:#aaa;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  margin-bottom: 4px;
-}
-.current_cut{
-  border:1px solid #ccc;
-  background: #fff;
-  color:#aaa;
-}
-.edit_product_qty_box{
-    position: absolute;
-    right:0px;
-    bottom: 0px;
-}
-  .choose{
-    padding:2px 10px;
-    background:burlywood;
-    color:white;
-    border-radius:20px;
-    font-size:12px;
-  }
-  .current_cut{
-    border:1px solid #ccc;
-    background: #fff;
-    color:#aaa;
-  }
+
+
+
+
+  
