@@ -1,4 +1,6 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "current-product":"/components/current-product/current-product"
+  }
 }

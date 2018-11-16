@@ -1,0 +1,8 @@
+<!--components/current-product/current-product.wxml-->
+  <!--规格-->
+    <view class="current_section">
+      <text class="section_name">{{currentProduct_data.name?currentProduct_data.name:currentProduct_data.group_name}}</text>
+      <view class="section_box">
+        <text wx:for="{{currentProduct_data.values.data?currentProduct_data.values.data:currentProduct_data.materials}}" wx:key="item.id" data-id="{{item.id}}" class="current_choose_value iconfont {{item.isChoosed?'icon-xingxingman':''}}" data-index="{{index}}" data-isChoosed="{{item.isChoosed}}" data-choosed_name="{{item.isChoosed?item.name:''}}" bindtap="send_choosed">{{item.name}}{{item.price?'￥'+item.price:''}}</text>
+      </view>        
+    </view>

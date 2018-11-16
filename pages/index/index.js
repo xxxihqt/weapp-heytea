@@ -46,7 +46,7 @@ Page({
     }
   },
   onReady:function(){
-    this.selectComponent('#index-main').getScrollHeight()
+    //this.selectComponent('#index-main').getScrollHeight()
   },
   getUserInfo: function(e) {
     console.log(e)
