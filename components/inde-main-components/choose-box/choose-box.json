@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-     "current-product":"/components/inde-main-components/current-product/current-product"
+     "current-product":"/components/inde-main-components/current-product/current-product",
+     "edit-qty":"/components/inde-main-components/edit-qty/edit-qty"
   }
 }

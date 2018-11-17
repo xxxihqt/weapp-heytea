@@ -1,0 +1,59 @@
+/* components/inde-main-components/shopping-car/shopping-car.wxss */
+.shoppingCarBox{
+    width:100vw;
+    height:90rpx;
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    background:brown;
+    z-index:666;
+}
+.show_Car_box{
+    position:absolute;
+    left:30rpx;
+    top:-10rpx;
+    background:#fff;
+    font-size:34rpx;
+    text-align:center;
+    padding:30rpx 40rpx;
+    line-height:30rpx;
+    box-sizing:border-box;
+    border-radius:40rpx;
+}
+.show_qty{
+    background:burlywood;
+    border-radius:100%;
+    color:#fff;
+    border:2rpx solid #fff;
+    font-size:26rpx;
+    display: block;
+    position:absolute;
+    width:40rpx;
+    height: 40rpx;
+    text-align: center;
+    line-height: 36rpx;
+    left:140rpx;
+    top:-20rpx;
+}
+.text_box{
+    display:flex;
+    height:100%;
+}
+.total_price{
+    display:inline-block;
+    background:#bbb;
+    width:70%;
+    line-height: 90rpx;   
+    text-align: right;
+    padding-right:30rpx;
+    box-sizing: border-box; 
+    font-weight:800;
+}
+.pay{
+    display:inline-block;
+    background:burlywood;
+    width:30%;
+    color:#fff;
+    text-align: center;
+    line-height: 90rpx;
+}

@@ -1,0 +1,5 @@
+<!--components/inde-main-components/little_choose_box/little_choose_box.wxml-->
+
+<view class="little_choose_box">
+     <text class="choose"  catchtap='choose' data-list="current{{littleIndex}}" data-imageid="{{edit_data.id}}">选规格</text> 
+</view>

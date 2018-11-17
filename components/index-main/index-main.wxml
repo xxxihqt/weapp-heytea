@@ -8,7 +8,7 @@
     </scroll-view>
   </view>
   <view  class="productBox">
-    <scroll-view vertical="true" scroll-y="true"  class="scrollBox" scroll-into-view="{{contentActive}}" scroll-with-animation="true"id="scrollBox" bindscroll="handleScroll">
+    <scroll-view vertical="true" scroll-y="true"  class="scrollBox" scroll-into-view="{{contentActive}}" scroll-with-animation="true"id="scrollBox" bindscroll="onScroll" upper-threshold="{{top_list_height}}" bindscrolltoupper="scrolltoupper" lower-threshold="{{bottom_list_height}}" bindscrolltolower="scrolltolower">
       <view wx:for="{{menuData.data}}" wx:key="{{item.id}}" wx:for-index="littleIndex" class="product-list" id="current{{littleIndex}}">
         <text class="title">{{item.name}}</text>
         <view wx:for="{{item.products.data}}" wx:for-item="inner_item" wx:key="inner_item.category_id" class="product" >
@@ -20,7 +20,15 @@
           <text class="product_desc">{{inner_item.description}}</text>
           <view>
             <text class="product_price">￥{{inner_item.skus.data[0].price}}</text>
-            <edit-qty edit_data="{{inner_item}}" shopping_product="{{shopping_product}}" littleIndex="{{littleIndex}}" class="edit_product_qty_box" bind:delivery_mag="add_qty"></edit-qty>
+            <edit-qty 
+              edit_data="{{inner_item}}" 
+              shopping_product="{{shopping_product}}" 
+              littleIndex="{{littleIndex}}" 
+              class="edit_product_qty_box" 
+              bind:delivery_msg="judge_add_or_cut" 
+              wx:if="{{inner_item.material_groups.length===0 && inner_item.attributes.data.length===0 && inner_item.specifications.data.length===0}}"
+              ></edit-qty>
+            <little_choose_box edit_data="{{inner_item}}" littleIndex="{{littleIndex}}" bind:delivery_choose="onGetisChooseBox" class="little_choose_box" wx:else ></little_choose_box>
           </view>
         </view>
         </view>
@@ -30,7 +38,19 @@
 
   <detail-box wx:if="{{isDetail}}" bind:getisDetail="onGetisDetail" bind:getisChooseBox="onGetisChooseBox" currentProduct="{{currentProduct}}" class="detail-box"></detail-box>
 
-  <choose-box wx:if="{{isChooseBox}}" currentProduct="{{currentProduct}}" current_choose="{{current_choose}}" bind:getisDetail="onGetisDetail" class="choose-box"></choose-box>
+  <choose-box wx:if="{{isChooseBox}}" 
+    currentProduct="{{currentProduct}}" 
+    current_choose="{{current_choose}}" 
+    edit_data="{{inner_item}}" 
+    shopping_product="{{shopping_product}}" 
+    littleIndex="{{littleIndex}}"
+    bind:delivery_msg="judge_add_or_cut"
+    bind:getisDetail="onGetisDetail" 
+  class="choose-box"></choose-box>
+
+  <shopping-car shopping_product="{{shopping_product}}" class="shopping_car_box" shopping_product_lenght="{{shopping_product_lenght}}" totalPrice="{{totalPrice}}" wx:if="{{shopping_product.length>0}}" bind:show_edit_shopping_car="onShow_edit_shopping_car"></shopping-car>
+
+  <edit-shopping-car class="edit_shopping_car" shopping_product="{{shopping_product}}" wx:if="{{show_edit_shopping_car}}"></edit-shopping-car>
 
   <view class="coverBox" wx:if="{{isCurrentProduct}}"  bindtap="onCloseTap">
   </view>

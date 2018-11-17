@@ -29,7 +29,7 @@
   height: 90%;
 }
 .navActive{
-  border-left:6rpx solid burlywood;
+  border-left:10rpx solid burlywood;
   background: #fff;
 }
 .product-list{
@@ -48,7 +48,7 @@
   box-sizing: border-box;
 }
 .imgBox{
-margin-top:40rpx;
+  margin-top:40rpx;
   width: 30%;
   height: 130rpx;
 }
@@ -80,8 +80,6 @@ margin-top:40rpx;
   font-weight: 900;
   font-size:34rpx;
 }
-
-
 .coverBox{
   position:fixed;
   left:0;
@@ -97,7 +95,6 @@ margin-top:40rpx;
   font-size:24rpx;
   color:#aaa;
 }
-
 
 
 

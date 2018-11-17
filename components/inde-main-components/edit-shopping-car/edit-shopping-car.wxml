@@ -1,0 +1,21 @@
+<!--components/inde-main-components/edit-shopping-car/edit-shopping-car.wxml-->
+<view class="edit_shopping_car_box">
+  <view class="clear_car">
+    <text>清空购物车</text>
+  </view>
+  <view class="car_list_box">
+    <view class="car_list" wx:for="{{shopping_product}}" wx:key="{{item.id}}">
+      <view class="title_box">
+        <text class="product_name">{{item.name}}</text>
+      </view>
+      <view class="msg_box">
+        <view class="option_box">
+          <text class="product_desc"></text>
+        </view>
+        <view class="product_price">
+        ￥{{item.skus.data[0].price}}</view>
+        //组件
+      </view>
+    </view>
+  </view>
+</view>

@@ -2,7 +2,10 @@
   "component": true,
   "usingComponents": {
     "edit-qty":"/components/inde-main-components/edit-qty/edit-qty",
+    "little_choose_box":"/components/inde-main-components/little_choose_box/little_choose_box",
     "choose-box":"/components/inde-main-components/choose-box/choose-box",
-    "detail-box":"/components/inde-main-components/detail-box/detail-box"
+    "detail-box":"/components/inde-main-components/detail-box/detail-box",
+    "shopping-car":"/components/inde-main-components/shopping-car/shopping-car",
+    "edit-shopping-car":"/components/inde-main-components/edit-shopping-car/edit-shopping-car"
   }
 }

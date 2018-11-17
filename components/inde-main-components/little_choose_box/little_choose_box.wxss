@@ -1,0 +1,15 @@
+/* components/inde-main-components/little_choose_box/little_choose_box.wxss */
+
+.little_choose_box{
+    position: absolute;
+    right:0rpx;
+    bottom: 0rpx;
+    height:60rpx;
+}
+   .choose{
+        padding:4rpx 20rpx;
+        background:burlywood;
+        color:white;
+        border-radius:40rpx;
+        font-size:28rpx;
+      }

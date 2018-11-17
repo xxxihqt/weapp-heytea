@@ -18,7 +18,18 @@
             </view>
       </view>
       <view class="car_go_box">
-            <text class="add_to_car">加入购物袋</text>        
+            <text class="add_to_car" 
+                data-from="choose-box"
+                id="add" 
+                wx:if="{{!show_edit_qty}}" 
+                catchtap="on_show_edit_qty" 
+                edit_data="{{currentProduct}}" 
+                shopping_product="{{shopping_product}}" 
+                littleIndex="{{littleIndex}}"
+                data-list="current{{littleIndex}}"
+                data-imageid="{{currentProduct.id}}"
+            >加入购物袋</text>      
+             <edit-qty wx:if="{{show_edit_qty}}" edit_data="{{currentProduct}}" now_shopping_product="{{now_shopping_product}}" littleIndex="{{littleIndex}}" class="edit_product_qty_box" bind:delivery_msg="judge_add_or_cut" bind:delivery_choose="onGetisChooseBox"></edit-qty>  
       </view>
     </view>
 </view>

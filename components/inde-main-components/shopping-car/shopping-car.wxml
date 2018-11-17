@@ -1,0 +1,11 @@
+<!--components/inde-main-components/shopping-car/shopping-car.wxml-->
+<view class="shoppingCarBox">
+    <view class="show_Car_box">
+        <text catchtap="show_edit_shopping_car">购物袋</text>
+        <text class="show_qty">{{shopping_product_lenght}}</text>
+    </view>
+    <view class="text_box">
+        <text class="total_price">￥{{totalPrice}}</text>
+        <text class="pay">结算</text>
+    </view>
+</view>

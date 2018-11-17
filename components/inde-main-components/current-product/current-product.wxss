@@ -35,3 +35,9 @@
   color:yellow;
   padding:0px 4px;
 }
+
+  .current_choose{
+        display: block;
+        font-size:24rpx;
+        color:#aaa;
+    }

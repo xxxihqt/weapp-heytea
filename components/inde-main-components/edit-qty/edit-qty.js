@@ -12,6 +12,9 @@ Component({
     },
     shopping_product:{
       type:Array
+    },
+    now_shopping_product:{
+      type:Array
     }
   },
 
@@ -20,7 +23,8 @@ Component({
    */
   data: {
     currentProduct:'',
-     show_add_qty:false
+     show_add_qty:false,
+     from_choose_box_hide:true
   },
 
   /**
@@ -28,24 +32,41 @@ Component({
    */
   methods: {
     deliveryId(e){
+      console.log('choose',e);
       //显示减号和数量
       this.setData({
         show_add_qty:true
       })
-      this.triggerEvent('delivery_mag', e);
-      console.log(e);
+    
+        this.triggerEvent('delivery_msg', e);
+      
       this.count_currentProduct(e);
     },
     count_currentProduct(e){
-        //console.log('count_currentProduct',e)
-      for(var item of this.data.shopping_product){
-        if(item.id===e.currentTarget.dataset.imageid){
-          this.setData({
-            currentProduct:item
-          })
-          break;
+          console.log('edit_qty',this.data.now_shopping_product)
+
+        if(this.data.now_shopping_product.length===0){
+
+          if(e.target.dataset.from){
+            this.setData({
+                show_add_qty:true
+            })
+          }else{
+            this.setData({
+              show_add_qty:false
+            })
+          } 
+        }else{
+          let id = e.currentTarget.dataset.imageid;
+          for(var item of this.data.now_shopping_product){
+            if(item.id===id){
+              this.setData({
+                  currentProduct:item
+              })
+                break;
+            }
+          }
         }
-      }
     }
   }
 })

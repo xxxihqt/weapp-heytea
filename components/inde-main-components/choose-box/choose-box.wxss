@@ -94,3 +94,20 @@
       line-height: 40rpx;
       font-size:28rpx;
     }
+        .current_choose{
+        display: block;
+        font-size:24rpx;
+        color:#aaa;
+    }
+
+.current_choose_value{
+  display: block;
+  padding:5px 10px;
+  border-radius: 10px;
+  border:1px solid #ccc;
+  font-size:12px;
+  align-items: flex-start;
+  margin-right: 5px;
+  margin-bottom:8px;
+  color:#aaa;
+}
